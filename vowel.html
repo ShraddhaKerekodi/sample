@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vowel</title>
+        <style>
+            body{
+                background-color:rgb(88, 194, 230) ;
+            }
+            h1{
+                color:blueviolet;
+            }
+            input{
+                font-size:25px;
+            }
+            .footer
+            {
+                position: fixed;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                text-align: center;
+                padding: 2px;
+                background-color: rgb(236, 26, 26);
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Left most vowel is</h1>
+            <input type="text" name="text" id="text" placeholder="Enter here"required><br><br>
+            <input type="button" value="Enter" id="click" onclick="proceed()">
+        </center>
+            <div class="footer">
+                <p>Created by &#169 4CB21CS104</p>
+            </div>
+            <script>
+                function proceed()
+                {
+                var text=document.getElementById("text").value;
+                for(var i=0;i<text.length;i++)
+                {
+                    if(
+                        text.charAt(i)=="a"||
+                        text.charAt(i)=="e"||
+                        text.charAt(i)=="i"||
+                        text.charAt(i)=="o"||
+                        text.charAt(i)=="u"||
+                        text.charAt(i)=="A"||
+                        text.charAt(i)=="E"||
+                        text.charAt(i)=="I"||
+                        text.charAt(i)=="O"||
+                        text.charAt(i)=="U"
+                    ){
+                    var pos=i+1;
+                    alert("String is: "+text+ "\n"+"Left most vowel is "+text.charAt(i)+"\n"+"position of "+text.charAt(i)+" is: "+pos);
+                    exit;
+                }
+            }
+            alert("String: "+text+" has no vowel");
+        }
+            </script>
+    </body>
+    </html>

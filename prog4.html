@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration form
+        </title>
+        <style>
+            body{
+                background-color: aquamarine;
+            }
+            h1,p{
+                text-align: center;
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Registration form</h1>
+        <p>Fill the form below</p>
+        <form action="">
+        <table align="center">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="name" placeholder="Enter name"></td>
+            </tr>
+            <tr>
+                <td><label>Mobile no</label></td>
+                <td><input type="text"name="country code"value="+91"size="2">
+                <input type="text"name="phone no"value=""size="10"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" name="email"placehold="Enter email"></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td><input type="radio"name="gender">Male
+                <input type="radio"name="gender">Female</td>
+            </tr>
+            <tr>
+                <td><label>Branch</label></td>
+                <td><select name="Branch">
+                    <option></option>
+                    <option>CSE</option>
+                    <option>ISE</option>
+                    <option>ECE</option>
+                    <option>AIML</option>
+                    <option>ME</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password"name="password"placeholder="Enter password"></td>
+            </tr>
+            <tr>
+                <td><label>Re password</label></td>
+                <td><input type="password"name="repassword"placeholder="Enter password again"></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea name="address"rows="3"cols="20" placeholder="Enter address"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox"name="agree">i agree to the rules</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"name="submit">
+                <input type="reset" name=""reset></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

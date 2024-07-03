@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Full name program</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCntr">
+            <h1>Full name program</h1>
+            <input type="text" ng-model="fname" placeholder="Enter your first name">
+            <input type="text" ng-model="lname" placeholder="Enter your last name">
+            Full Name={{fname+""+lname}}
+        </div>
+        <script>
+            var app=angular.module("myApp",[]);
+            app.controller=("myCntr",function($scope){
+            $scope.fname="Jhon";
+            $scope.lname="Doe";
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animal stacking</title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            h1{
+                text-align: center;
+            }
+            .dog{
+                position: absolute;
+                top:10%;
+                right:10%;
+                left:10%;
+                z-index:0;
+                height: 200pt;
+                width: 300pt;
+            }
+            .cat{
+                position: absolute;
+                top: 30%;
+                right:30%;
+                left:30%;
+                z-index:1;
+                height: 200pt;
+                width: 300pt;  
+            }
+            .horse{
+                position: absolute;
+                top: 50%;
+                right:50%;
+                left:50%;
+                z-index:2;
+                height: 200pt;
+                width: 300pt;
+            }
+            .footer{
+                position:fixed;
+                right:0;
+                left:0;
+                bottom:0;
+                background-color: brown;
+                color:aliceblue;
+                padding-top:2px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            var topIndex=10;
+            function movToTop(picture){
+                picture.style.zIndex=++topIndex;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Image overlap demo</h1>
+        <div id="container">
+            <img class="dog" src="dog.jpg" onmouseover="movToTop(this)">
+            <img class="cat" src="cat.jpg" onmouseover="movToTop(this)">
+            <img class="horse" src="horse.jpg" onmouseover="movToTop(this)">
+        </div>
+        <div class="footer">
+            <p>This created by &#169 4CB21CS104</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <style>
+             body{
+                background-color:aqua;
+                }
+                input{
+                    font-size:20px;
+                }
+                label{
+                    font-size:20px;
+                }
+                .footer
+                {
+                    position: fixed;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    text-align: center;
+                    padding: 2px;
+                    background-color: darkgreen;
+                    color:black;
+                } 
+        </style>
+    </head>
+    <body>
+        <form onsubmit="return formValidator()">
+        <table align="center">
+        <tr>
+            <td><label>Enter the USN</label></td>
+            <td><input type="text" id="usn1"/></td>
+        </tr>
+        <tr>
+            <td><label>Enter the SEM</label></td>
+            <td><input type="text" id="sem1"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Check Fields"></td>
+        </tr>
+        </table>
+        </form>
+    <div class="footer">
+    <p>Created by &#169 4CB21CS104</p>
+</div>
+<script>
+    function formValidator()
+    {
+        var usn=document.getElementById('usn1');
+        var sem=document.getElementById('sem1');
+        if(isCorrect(usn))
+        {
+            if(isPerfect(sem))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+    function isPerfect(elem2)
+    {
+    var alphaexp2=/^[1-8]$/
+    if(elem2.value.length==0)
+    {
+        alert("Enter the sem");
+        elem2.focus();
+        return false;
+    }
+    else if(!elem2.value.match(alphaexp2))
+    {
+        alert("Enter the correct sem in the range 1-8");
+        elem2.focus();
+        return false;
+    }
+    else{
+        alert("Entered sem is correct");
+        return true;
+    }
+    }
+    function isCorrect(elem1)
+    {
+    var alphaexp1=/[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]/
+    if(elem1.value.length==0)
+    {
+        alert("Enter the usn");
+        elem1.focus();
+        return false;
+    }
+    else if(!elem1.value.match(alphaexp1))
+    {
+        alert("Enter the correct USN of the format DAADDAAA");
+        elem1.focus();
+        return false;
+    }
+    else{
+        alert("Entered USN is correct");
+        return true;
+    }
+    }
+</script>
+    </body>
+</html>
